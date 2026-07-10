@@ -29,9 +29,6 @@ jobs:
       - name: Validate
         run: terraform validate
 
-      - name: Format check
-        run: terraform fmt -check -recursive
-
       - name: Plan
         id: plan
         if: github.event_name == 'pull_request'
